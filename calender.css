@@ -1,0 +1,84 @@
+/* Calendar Container */
+.calendar-wrapper {
+  max-width: 800px;
+  margin: 20px auto;
+  background: skyblue;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  font-family: sans-serif;
+}
+
+/* Calendar Title */
+.calendar-wrapper h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Calendar Grid */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+/* Weekday Labels */
+.day-name {
+  text-align: center;
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Day Cell */
+.day, .day.empty {
+  background: #f5f5f5;
+  border-radius: 6px;
+  min-height: 90px;
+  padding: 6px;
+  font-size: 13px;
+  position: relative;
+  color: #222;
+}
+
+/* Day Number */
+.day span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Booked Day Highlight */
+.day.booked {
+  background: #d1e7dd;
+  border: 1px solid #0f5132;
+}
+
+/* Appointment Box */
+.appointment {
+  background: #ffffff;
+  color: #0f5132;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Cancel Button */
+.cancel-btn {
+  margin-top: 6px;
+  padding: 4px 6px;
+  font-size: 11px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #b02a37;
+}

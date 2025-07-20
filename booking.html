@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment | Med Ivory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Med Ivory</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="booking.html" class="active">Book</a>
+        <a href="transaction.html">Pay Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="booking">
+      <h2>Book an Appointment</h2>
+      <form id="bookingForm">
+        <form action="transaction.html" method="GET">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+
+        <select name="service" required>
+          <option value="" disabled selected>Choose a Service</option>
+          <option value="skin">Skin Rejuvenation</option>
+          <option value="laser">Laser Treatment</option>
+          <option value="Skin Lightening">Skin Lightening</option>
+          <option value="Dandruff treatments">Dandruff treatments</option>
+          <option value="Hydra Facial">Hydra Facial</option>
+          <option value="Acne care">Acne care</option>
+          <option value="Hair Transplantation">Hair Transplantation</option>
+          <option value="Chemical Peel">Chemical Peel</option>
+        </select>
+
+        <input type="date" name="date" required />
+        <input type="time" name="time" required />
+
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Med Ivory Clinic. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop actual form submission
+      window.location.href = "transaction.html"; // Redirect to transaction page
+    });
+  </script>
+</body>
+</html>

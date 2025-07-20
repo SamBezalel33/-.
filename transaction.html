@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment | Med Ivory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Med Ivory</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="booking.html">Book</a>
+        <a href="transaction.html" class="active">Pay</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section transaction-section">
+      <h2>Payment Details</h2>
+      <form id="paymentForm">
+        <input type="text" name="cardName" placeholder="Cardholder Name" required />
+        <input type="text" name="cardNumber" placeholder="Card Number" maxlength="16" required />
+        <input type="text" name="expiry" placeholder="MM/YY" maxlength="5" required />
+        <input type="text" name="cvv" placeholder="CVV" maxlength="4" required />
+
+        <button type="submit">Make Payment</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Med Ivory Clinic. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("paymentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Payment successful! Thank you for booking with Med Ivory.");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
